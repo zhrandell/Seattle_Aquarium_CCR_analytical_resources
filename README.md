@@ -10,5 +10,5 @@ Mapping and spatial analyses comprise a large bulk of the analytical deliverable
   <img src="figures/MapZoomed.png" width="400" />
 </p>
 
-* to view online coding resources for R, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/coding_resources.markdown) *markdown* document
+* to view online coding resources for R, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/coding_resources.md) *markdown* document
 
