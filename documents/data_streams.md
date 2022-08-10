@@ -6,8 +6,8 @@
 * use [CoralNet](https://coralnet.ucsd.edu/) to analyze percent-cover of aggregate species from photos. 
 * NOTE that I am uncertain whether we want to use photos, OR simply extract stills from our video. Thus far it appears that video from the GoPro is better able to adapt to the variable lighting, etc., we encounter underwater . . . I'm thus inclined to prioritize extracting high quality still (see below) from video. 
 
-### 4K 30FPS wide angle video
-* VIAME
+### 4K 30FPS 16:9 video
+* [VIAME](https://viame.readthedocs.io/en/latest/), Video and Image Analytics for Marine Environments, an open-source do-it-yourself AI toolkit. VIAME uses photos or video. See [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_development/blob/main/documents/ROV_AI_synopsis/ROV_AI_synopsis.pdf) document for discussion and a proof-of-concept use of VIAME with a sequence of still images from an urchin barren. 
 * extract stills from video. This type of task is overwhelmingly achieved in Python instead of *R*, with examples [here](https://www.geeksforgeeks.org/extract-images-from-video-in-python/), [here](https://www.codespeedy.com/extract-images-from-a-video-in-python/), [here](https://www.askpython.com/python/examples/extract-images-from-video), [here](https://www.thepythoncode.com/article/extract-frames-from-videos-in-python), and [here](https://stackoverflow.com/questions/10225403/how-can-i-extract-a-good-quality-jpeg-image-from-a-video-file-with-ffmpeg)
 * photogrammetry from stills (a "down the road" objective). We can use various programs (e.g., [Agisoft](https://www.agisoft.com/)) to create mossaics of our benthic surveys. 
 
@@ -18,7 +18,8 @@
 
 ## Satellite / aerial imagery
 * DNR data for kelp canopy 
+* MODIS satellite data for cholorophyll & sea temperature (see [here](https://modis.gsfc.nasa.gov/about/) for information about MODIS, and [here](https://github.com/zhrandell/SubstrateComplexity/blob/main/Code/figSOM_chlorophyll_singleDay.R) for a script plotting a single day of MODIS data to create a map, and [here](https://github.com/zhrandell/SubstrateComplexity/blob/main/Code/figSOM_chlorophyll_21years.R) for a script analyzing 21 years of MODIS data. 
 
 ## Base layers
 * Bathymetry data for Puget Sound
-* Bathymetry data for the Western Strait
+* Bathymetry data for the Western Strait (e.g., see here) 
