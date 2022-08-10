@@ -6,7 +6,7 @@ This is a private repository to organize information pertaining to the analysis 
 
 * to view online coding resources for R and GitHub, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/coding_resources.md) *markdown* document
 * to view resources for spatial analyses in R, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/spatial_resources.md) *markdown* document
-* to view summary information about our various data stream, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/data_streams.md) *markdown* document
+* to view summary information about our various data streams, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/data_streams.md) *markdown* document
 
 <p align="center">
   <img src="figures/2022_08_01_Mushroom-Rock_depthlog1024_1.png" width="400" />
