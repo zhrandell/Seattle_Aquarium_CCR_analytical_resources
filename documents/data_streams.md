@@ -22,3 +22,4 @@
 
 ## Base layers
 * See [here](https://www.ncei.noaa.gov/maps/bathymetry/) for NOAA's portal to view and download bathymetry data. 
+* See [here](https://ecology.wa.gov/Research-Data/Data-resources/Geographic-Information-Systems-GIS/Data) for the dept of Ecology's website linking to spatial data. 
