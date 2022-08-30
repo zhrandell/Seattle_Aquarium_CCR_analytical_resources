@@ -15,8 +15,8 @@ names(dat)[2] <- "dist"
 names(dat)[3] <- "conf"
 
 
-## Convert altimeter data from mm to feet 
-dat$dist <- conv_unit(dat$dist, "mm", "ft")
+## Convert altimeter data from mm to m
+dat$dist <- conv_unit(dat$dist, "mm", "m")
 
 
 ## function to calculate average ping and confidence per 1s 
