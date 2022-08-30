@@ -20,7 +20,7 @@ rm(list = ls())
 setwd('/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/QGC')
 
 # load main telemetry file
-main <- read.csv("2022-08-15 11-57-51 vehicle1.csv")
+main <- read.csv("2022-08-15 09-56-00 vehicle1.csv")
 
 ## Process columns ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 # filter columns
@@ -62,6 +62,10 @@ x.max <- function(df){
 xlim <- x.max(ordered)
 
 
+# Convert depth data from ft to m 
+ordered$depth <- conv_unit(ordered$depth, "ft", "m")
+
+
 # tidy up
 main.clean <- ordered
 remove(renamed, filtered, ordered, main)
@@ -90,10 +94,6 @@ euclidDist <- sp::spDists(cord.UTM, longlat = FALSE, segments=TRUE)
 main.clean$EucDIS <- c(NA, euclidDist)
 
 
-# Convert distance from m to feet 
-main.clean$EucDIS <- conv_unit(main.clean$EucDIS, "m", "ft")
-
-
 # tidy up
 main.clean.dis <- main.clean
 remove(cord.dec, cord.UTM, main.clean)
@@ -110,7 +110,7 @@ remove(cord.dec, cord.UTM, main.clean)
 setwd('/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/Ping')
 
 # load the appropriate Ping csv file (same time as the main telemetry file)
-ping <- read.csv("20220815-115551033.csv")
+ping <- read.csv("20220815-095728695.csv")
 
 
 ## Calculate average altimeter and confidence interval per second ~~~~~~~~~~~ ##
@@ -119,8 +119,8 @@ names(ping)[2] <- "dist"
 names(ping)[3] <- "conf"
 
 
-# Convert altimeter data from mm to feet 
-ping$dist <- conv_unit(ping$dist, "mm", "ft")
+# Convert altimeter data from mm to m 
+ping$dist <- conv_unit(ping$dist, "mm", "m")
 
 
 # function to calculate average ping and confidence per 1s 
@@ -166,7 +166,7 @@ setwd('/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_
 dat <- merge(main.clean.dis, new_ping, all=FALSE)
 
 # create csv file with telemetry and Ping data
-write.csv(dat, "2022-08-15_11-57-51.csv", row.names = FALSE)
+write.csv(dat, "2022-08-15_09-57-40.csv", row.names = FALSE)
 
 ## END merge data frames  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 
