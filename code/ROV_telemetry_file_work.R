@@ -104,7 +104,7 @@ remove(cord.dec, cord.UTM, main.clean)
 
 ########## ~~~ Average Altimeter and Confidence Interval from Ping ~~~ ##########
 # CAUTION: Make sure the Ping bin file is converted to a csv file using the python 
-# script before proceeding 
+# script (Ping_to_csv.py) before proceeding 
 
 ## Set path to the Ping csv file ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 setwd('/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/Ping')
