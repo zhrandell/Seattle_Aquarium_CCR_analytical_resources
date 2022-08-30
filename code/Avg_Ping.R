@@ -2,6 +2,7 @@
 library(tidyverse)
 library(lubridate)  ## lubridate should be in tidyverse, but adding it here just in case
 library(hms)
+library(measurements)
 
 setwd("/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/Ping")
 
@@ -14,8 +15,8 @@ names(dat)[2] <- "dist"
 names(dat)[3] <- "conf"
 
 
-## convert altimeter data to meters
-dat$dist <- dat$dist/1000
+## Convert altimeter data from mm to feet 
+dat$dist <- conv_unit(dat$dist, "mm", "ft")
 
 
 ## function to calculate average ping and confidence per 1s 
