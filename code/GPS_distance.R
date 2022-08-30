@@ -3,6 +3,7 @@
 #load packages 
 library(geosphere)
 library(dplyr)
+library(measurements)
 
 #set path
 setwd("/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/QGC")
@@ -12,7 +13,7 @@ dat = read.csv("2022-08-15_09-56-00_vehicle1_cleaned.csv")
 
 ## Haversine Distance ------------------------
 # create new data frame with Distance column. Distance is the difference in lon, lat 
-    #between rows converted from degrees to meters using the 'Haversine method'
+# between rows converted from degrees to meters using the 'Haversine method'
 dat2 <- dat %>% mutate(dat, HavDIS = distHaversine(cbind(lon, lat), cbind(lag(lon), 
                                       lag(lat))))
 
