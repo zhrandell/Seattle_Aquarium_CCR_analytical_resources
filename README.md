@@ -13,4 +13,8 @@ This is a private repository to organize information pertaining to the analysis 
   <img src="figures/MapZoomed.png" width="400" />
 </p>
 
+<p align="center">
+  <img src="figures/CoralNet_2.png" width="500" height="400"/>
+</p>
+
 
