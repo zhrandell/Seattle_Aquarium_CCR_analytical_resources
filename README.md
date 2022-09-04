@@ -1,4 +1,4 @@
-# Seattle_Aquarium_ROV_telemetry_and_mapping
+# Seattle_Aquarium_ROV_telemetry_mapping_CoralNet
 
 ## Overview
 
