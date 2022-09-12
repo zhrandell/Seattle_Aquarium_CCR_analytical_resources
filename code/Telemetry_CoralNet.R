@@ -6,7 +6,7 @@ library(lubridate)
 rm(list = ls())
 
 # set working directory 
-setwd('/Users/path....')
+setwd('/Users/path....') 
 
 
 ## Calculate flight time in cumulative seconds ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
@@ -39,11 +39,11 @@ tel <- tel %>% mutate(sec_csum = cumsum(sec_diff))
 
 # create new columns that will consist of the image name
 tel <- tel %>% mutate(date_transect = "2022_08_15_",time_transect = "10-01-31_",
-                        add = "+", jpeg = ".jpg")
+                       jpeg = ".jpg")
 
 # unite columns for image name into new image name column that includes the cumulative time
 tel <- tel %>% unite(col ="img_name", c(date_transect, time_transect,
-                                          add, sec_csum, jpeg), sep = '', remove = FALSE)
+                                         sec_csum, jpeg), sep = '', remove = FALSE)
 
 
 # remove unnecessary columns: flight seconds sec_diff
