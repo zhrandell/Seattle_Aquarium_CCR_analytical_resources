@@ -12,7 +12,7 @@ def extractImages(pathIn, pathOut):
 		vidcap.set(cv2.CAP_PROP_POS_MSEC,(count*1000)) 
 		success,image = vidcap.read()
 		print('Read a new frame: ', success)
-		cv2.imwrite( '/Users/meganwilliams/Library/CloudStorage/OneDrive-Personal/Imagery/2022_08_15/vignettes/2022_08_15_10-01-31_+' + "%d.jpg" % count, image)     # save frame as JPEG file
+		cv2.imwrite( '/Users/meganwilliams/Library/CloudStorage/OneDrive-Personal/Imagery/2022_08_15/vignettes/2022_08_15_10-01-31_' + "%d.jpg" % count, image)     # save frame as JPEG file
 		count = count + 30 #every 30 seconds 
 
 	    
