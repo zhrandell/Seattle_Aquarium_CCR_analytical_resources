@@ -1,13 +1,13 @@
+setwd(here::here())
+
 ## load packages
 library(tidyverse)
 library(lubridate)  ## lubridate should be in tidyverse, but adding it here just in case
 library(hms)
 library(measurements)
 
-setwd("/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/Ping")
-
 ## load data
-dat <- read.csv("20220815-115551033.csv", header=TRUE)
+dat <- read.csv("./ROV_telemetry/Ping/20220815-115551033.csv", header=TRUE)
 
 
 ## rename columns 
@@ -42,7 +42,7 @@ Avg.Ping <- function(x){
 ## call function
 new_dat <- Avg.Ping(dat)
 
-write.csv(new_dat, "20220815-115551033_Avg_Ping.csv", row.names = FALSE)
+write.csv(new_dat, file.path('./ROV_telemetry/Ping', "20220815-115551033_Avg_Ping.csv"), row.names = FALSE)
   
   
   
