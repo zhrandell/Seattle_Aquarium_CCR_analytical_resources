@@ -1,3 +1,4 @@
+#set working directory 
 setwd(here::here())
 
 ## load packages
@@ -6,9 +7,10 @@ library(lubridate)  ## lubridate should be in tidyverse, but adding it here just
 library(hms)
 library(measurements)
 
-## load data
-dat <- read.csv("./ROV_telemetry/Ping/20220815-115551033.csv", header=TRUE)
 
+## load Ping data
+# path to Ping files = ./ROV_telemetry/Ping
+dat <- read.csv("./ROV_telemetry/Ping/20220815-115551033.csv", header=TRUE)
 
 ## rename columns 
 names(dat)[2] <- "dist"
@@ -42,7 +44,7 @@ Avg.Ping <- function(x){
 ## call function
 new_dat <- Avg.Ping(dat)
 
-write.csv(new_dat, file.path('./ROV_telemetry/Ping', "20220815-115551033_Avg_Ping.csv"), row.names = FALSE)
+write.csv(new_dat, './ROV_telemetry/Ping/20220815-115551033_Avg_Ping.csv', row.names = FALSE)
   
   
   
