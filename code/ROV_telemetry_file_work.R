@@ -1,4 +1,11 @@
 ##################### ~~~ ROV Telemetry File Work ~~~ #########################
+
+#set working directory 
+setwd(here::here())
+
+# path to Ping files = ./ROV_telemetry/Ping
+# path to telemetry files = ./ROV_telemetry/QGC
+
 ## Startup ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 library(tidyverse)
 library(sf)
@@ -15,12 +22,8 @@ rm(list = ls())
 
 ########### ~~~~~~~~~~ GPS tracklog cleanup ~~~~~~~~~~~~~~~~~~~~~~~ ############
 
-## Set path and load data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
-# set your path where you saved the main telemetry file 
-setwd('/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/QGC')
-
-# load main telemetry file
-main <- read.csv("2022-08-15 09-56-00 vehicle1.csv")
+# load main telemetry file 
+main <- read.csv("./ROV_telemetry/QGC/2022-08-15 09-56-00 vehicle1.csv")
 
 ## Process columns ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 # filter columns
@@ -106,11 +109,9 @@ remove(cord.dec, cord.UTM, main.clean)
 # CAUTION: Make sure the Ping bin file is converted to a csv file using the python 
 # script (Ping_to_csv.py) before proceeding 
 
-## Set path to the Ping csv file ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
-setwd('/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/Ping')
 
 # load the appropriate Ping csv file (same time as the main telemetry file)
-ping <- read.csv("20220815-095728695.csv")
+ping <- read.csv("./ROV_telemetry/Ping/20220815-095728695.csv")
 
 
 ## Calculate average altimeter and confidence interval per second ~~~~~~~~~~~ ##
@@ -154,19 +155,15 @@ remove(ping)
 
 
 
-
 ########## ~~~~~~~~~~~  Merge Telemetry and Ping Data  ~~~~~~~~~~  ##########
-## Set path to folder for polished telemetry files ~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 
-setwd('/Users/meganwilliams/Documents/GitHub/Seattle_Aquarium_ROV_telemetry_and_mapping/ROV_telemetry/Cleaned')
+## Merge cleaned main telemetry data and average ping dataframes together using time 
+# and drop rows with NA values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
+dat <- merge(main.clean.dis, new_ping, by.x = "time", all=FALSE)
 
 
-## Merge cleaned main telemetry data and average ping dataframes together, 
-# drop rows with NA values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
-dat <- merge(main.clean.dis, new_ping, all=FALSE)
-
-# create csv file with telemetry and Ping data
-write.csv(dat, "2022-08-15_09-57-40.csv", row.names = FALSE)
+# create csv file with telemetry and Ping data into 'Cleaned' folder (./ROV_telemetry/Cleaned)
+write.csv(dat, "./ROV_telemetry/Cleaned/2022-08-15_09-57-40copy.csv", row.names = FALSE)
 
 ## END merge data frames  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 
