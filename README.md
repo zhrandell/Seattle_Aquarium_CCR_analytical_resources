@@ -13,12 +13,9 @@ This is a public repository to organize information pertaining to the analysis a
 * To view summary information about our various data streams, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/data_streams.md) *.md* document.
 
 <p align="center">
-  <img src="figures/2022_08_01_Mushroom-Rock_depthlog1024_1.png" width="400" />
-  <img src="figures/MapZoomed.png" width="400" />
+  <img src="figures/Nereo_Dive.png" width="400", height="400"/>
+  <img src="figures/CoralNet_2.png" width="400", height="400" />
 </p>
 
-<p align="center">
-  <img src="figures/CoralNet_2.png" width="500" height="400"/>
-</p>
 
 
