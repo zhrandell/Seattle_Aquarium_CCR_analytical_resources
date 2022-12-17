@@ -1,5 +1,5 @@
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
-## simulate transects test ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
+## simulate transects ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 
 
@@ -108,22 +108,30 @@ save.data <- function(transect.data, new.data, file.name){
 
 ## invoke functions to simulate transects ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 ## load data and convert to radians
+dat_T1 <- load.dat(T1)
 dat_T2 <- load.dat(T2)
+dat_T3 <- load.dat(T3)
 dat_T4 <- load.dat(T4)
 
 
 ## create dataframe with output; specify starting x, y coordinates 
-out_T2 <- set.output(dat_T2, 47.63037, dat_T2$lon[1])
+out_T1 <- set.output(dat_T1, dat_T1$lat[1], dat_T1$lon[1]) #47.63037
+out_T2 <- set.output(dat_T2, dat_T2$lat[1], dat_T2$lon[1])
+out_T3 <- set.output(dat_T3, dat_T3$lat[1], dat_T3$lon[1])
 out_T4 <- set.output(dat_T4, dat_T4$lat[1], dat_T4$lon[1])
 
 
 ## simulate data 
+out_T1 <- simulate(dat_T1, out_T1)
 out_T2 <- simulate(dat_T2, out_T2)
+out_T3 <- simulate(dat_T3, out_T3)
 out_T4 <- simulate(dat_T4, out_T4)
 
 
 ## save data 
+dat_T1 <- save.data(dat_T1, out_T1, "simulated_2022_10_06_T1.csv")
 dat_T2 <- save.data(dat_T2, out_T2, "simulated_2022_10_06_T2.csv")
+dat_T3 <- save.data(dat_T3, out_T3, "simulated_2022_10_06_T3.csv")
 dat_T4 <- save.data(dat_T4, out_T4, "simulated_2022_10_06_T4.csv")
 ## END data simulation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 

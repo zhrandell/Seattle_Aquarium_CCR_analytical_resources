@@ -16,12 +16,12 @@ library(leaflet)
 rm(list = ls())
 
 ## set your path where you saved the GPS tracklog 
-path <- "D:/OneDrive/Desktop/tracks"
+path <- "D:/OneDrive/Desktop"
 
-
+getwd()
 ## load a path
 setwd(path)
-dat <- read.csv("2022-08-01_13-23.csv", header = TRUE, stringsAsFactors = FALSE)
+dat2 <- read.csv("T2.csv", header = TRUE, stringsAsFactors = FALSE)
 ## END startup ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 
 
@@ -66,7 +66,7 @@ x.max <- function(df){
 
 
 ## call function
-xlim <- x.max(ordered)
+xlim <- x.max(dat)
 
 
 ## remove erroneous GPS points 
@@ -102,24 +102,24 @@ my.theme = theme(panel.grid.major = element_blank(),
 
 
 ## plot depth
-p1 <- ggplot(filtered, aes(seq, depth)) +
+p1 <- ggplot(dat, aes(seq, depth)) +
   geom_path() + my.theme + 
-  scale_x_continuous(breaks=seq(0, xlim, 2)) +
-  xlab("dive time (minutes)") + ylab("depth (feet)") +
+  scale_x_continuous(breaks=seq(0, xlim, 4)) +
+  xlab("dive time (minutes)") + ylab("depth (meters)") +
   geom_hline(yintercept=0, col="blue")
 
 print(p1)
 ## END depth figure ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 
-
-
+graphics.off()
+windows(10, 5)
 
 
 ## create interactive leaflet map ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
 map <- leaflet() %>%
   addTiles() %>%
-  setView(lng = -124.7107, lat = 48.38889, zoom=15) %>%
-  addPolylines(data=filtered, lat=~lat, lng=~lon, weight=1, color="black", opacity=1)
+  #setView(lng = -124.7107, lat = 48.38889, zoom=15) %>%
+  addPolylines(data=dat2, lat=~gps.lat, lng=~gps.lon, weight=1, color="black", opacity=1)
 
 
 ## visualize map 
