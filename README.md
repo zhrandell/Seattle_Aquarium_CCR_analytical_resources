@@ -15,8 +15,8 @@ For more general information about this ROV project including summary documentat
 * To view summary information about our various data streams, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/data_streams.md) *.md* document.
 
 <p align="center">
-  <img src="figures/Nereo_Dive.png" width="400", height="400"/>
-  <img src="figures/CoralNet_2.png" width="400", height="400" />
+  <img src="figures/CentennialPark.png" width="400", height="400"/>
+  <img src="survey_params.pdf" width="400", height="400" />
 </p>
 
 
