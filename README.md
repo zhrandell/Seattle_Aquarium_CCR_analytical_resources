@@ -15,9 +15,9 @@ For more general information about this ROV project including summary documentat
 * To view summary information about our various data streams, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_and_mapping/blob/main/documents/data_streams.md) *.md* document.
 
 <p align="center">
-  <img src="figures/CentennialPark.png" width="600", height="300"/>
+  <img src="figures/CentennialPark.png" width="600", height="500"/>
   <img src="figures/survey_params.png" width="600", height="200" /> 
-  <img src="figures/area_T4.png" width="600", height="200" /> 
+  <img src="figures/area_T4.png" width="500", height="200" /> 
 </p>
 
 
