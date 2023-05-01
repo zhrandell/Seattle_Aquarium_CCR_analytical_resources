@@ -17,6 +17,7 @@ For more general information about this ROV project including summary documentat
 <p align="center">
   <img src="figures/CentennialPark.png" width="400", height="400"/>
   <img src="figures/survey_params.png" width="400", height="200" /> 
+  <img src="figures/area_T4.png" width="400", height="200" /> 
 </p>
 
 
