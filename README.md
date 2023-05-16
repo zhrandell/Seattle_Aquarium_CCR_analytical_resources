@@ -8,14 +8,17 @@ For more general information about this ROV project including summary documentat
 
 * Code can be found [here](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/tree/main/code).
 * We are fortunate to be working with [Clyde McQueen](https://github.com/clydemcqueen), who’s assisting with a variety of software aspects of our project, including the development of custom software to enable “terrain following” (dubbed _surftrak_), where the ROV auto-adjusts its altitude over varying seafloor based upon readings from the Ping Sonar Altimeter. For more information, please see Clyde’s [_surftrak_ repository](https://github.com/clydemcqueen/ardusub_surftrak). 
-* Clyde has also made Python scripts available to help process and analyze ROV telemetry logs from ROVs running ArduSub -- those scripts can be accessed [here](https://github.com/clydemcqueen/ardusub_log_tools).   
+* Clyde has also made Python scripts available to help process and analyze ROV telemetry logs from ROVs running ArduSub -- those scripts can be accessed [here](https://github.com/clydemcqueen/ardusub_log_tools).  
+* As an example of the two AI analyses programs we are using, see figure 4 below, taken from our 2022 year-end report to the Port of Seattle, which itself can be downloaded [here](https://drive.google.com/file/d/1HJUBRQQiuhMxuoTgmrHuluVSnRD-cZ3M/view).  
 * To view the 66 percent-cover categories of red, green, & brown algae, substrate types, sessile and mobile invertebrates, and fishes that we have created in CoralNet, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/blob/main/documents/CoralNet_Classifications.xlsx) *.xlsx* document (click "view raw" or "download").
 * To view our *Overarching_Workflow.xlsx* document, tracking the precise steps required throughout file (e.g., *.bin*, *.csv*, *.mp4*, *.jpg*) creation, processing, merging, saving, analysis, etc., see [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/blob/main/documents/Overarching_Workflow.xlsx) *.xlsx* document (click "view raw" or "download"). 
 
 <p align="center">
+  <img src="figures/AI_image.png" width="600", height="400"/>
   <img src="figures/CentennialPark.png" width="600", height="500"/>
   <img src="figures/survey_params.png" width="600", height="200" /> 
-  <img src="figures/area_T4.png" width="450", height="225" /> 
+  <img src="figures/area_T4.png" width="600", height="300" />
+  <img src="figures/2022_08_01_Mushroom-Rock_depthlog1024_1.png" width="600", height="300" />
 </p>
 
 
