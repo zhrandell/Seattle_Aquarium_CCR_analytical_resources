@@ -1,4 +1,4 @@
-# Seattle_Aquarium_ROV_telemetry_imagery_analysis
+# Seattle_Aquarium_CCR_analytical_resources
 
 ## Overview
 
