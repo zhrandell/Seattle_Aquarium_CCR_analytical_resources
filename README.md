@@ -2,17 +2,38 @@
 
 ## Overview
 
-This is a public repository to organize information pertaining to the analysis and visualization of ROV telemetry, spatial data, and preliminary AI analyses of species, taxa, and substrate type via [CoralNet](https://coralnet.ucsd.edu/) and [VIAME](https://www.viametoolkit.org/wp-content/uploads/2020/09/VIAME-AI-Workshop-Aug2020.pdf). Our overarching objective here is to provide an open-source location in which we store code and resources necessary for other entities or individuals to reproduce our ROV telemetry and sensor file management and analyses. Furthermore, this repository will provide a central location to hash out problems and discuss results, as exhibited in the [Issues](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/issues?q=is%3Aissue+is%3Aclosed) tab above to the top left (for example, linked [here](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/issues/9) you'll find an issue discussing how to calculate the area of seafloor filmed by our downward-facing GoPro video, and linked [here](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/issues/8) you'll find an issue that walks through the code necessary to simulate GPS coordinates of ROV transects in instances where the acoustic GPS system exhibited errors.   
+This is a public repository to organize information pertaining to the analysis and visualization of ROV telemetry, spatial data, and preliminary AI analyses of species, taxa, and substrate type via [CoralNet](https://coralnet.ucsd.edu/) and [VIAME](https://www.viametoolkit.org/wp-content/uploads/2020/09/VIAME-AI-Workshop-Aug2020.pdf). 
+Our overarching objective here is to provide an open-source location in which we store code and resources necessary for other entities or individuals to reproduce our ROV telemetry and sensor file management and AI image analyses. 
+Furthermore, this repository will provide a central location to hash out problems and discuss results, as exhibited in the [Issues](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/issues?q=is%3Aissue+is%3Aclosed) tab above to the top left.
 
-For more general information about this ROV project including summary documentation, ROV videos, and photos from its deployment, see our other public repo [Seattle_Aquarium_ROV_development](https://github.com/zhrandell/Seattle_Aquarium_ROV_development)
+For more general information about this ROV project including summary documentation, ROV videos, and photos from its deployment, see our main GitHub repo [Seattle_Aquarium_CCR_Coastal_Climate_Resilience](https://github.com/zhrandell/Seattle_Aquarium_CCR_Coastal_Climate_Resilience)
+
+## GitHub resources
+
+We are fortunate to be working with [Clyde McQueen](https://github.com/clydemcqueen), who’s assisting with a variety of software aspects of our project, including the development of custom software to enable “terrain following” (dubbed _surftrak_), where the ROV auto-adjusts its altitude over varying seafloor based upon readings from the Ping Sonar Altimeter. The following table lists out multiple open-sources resources Clyde has developed.
+
+<table>
+<tr> <td> <a href="https://github.com/clydemcqueen/ardusub_surftrak"> <b> ardusub_surftrak </b> </a> </td> <td> A range hold flight mode enabling the ROV to autonomously maintain a set altitude above the seafloor </td> </tr> 
+<tr> <td> <a href="https://github.com/clydemcqueen/wl_ugps_external_extension"> <b> wl_ugps_external_extension </b> </a> </td> <td> A blueOS extension that listens for NMEA messages from our GNSS Satelitte Compass and feeds those data to our USBL system </td> </tr> 
+<tr> <td> <a href="https://github.com/clydemcqueen/ardusub_log_tools"> <b> ardusub_log_tools </b> </a> </td> <td> A collection of log analysis tools for working with ArduSub vehicles </td> </tr> 
+<tr> <td> <a href="https://github.com/clydemcqueen/wl_ugps_acoustic_analysis"> <b> wl_ugps_acoustic_analysis </b> </a> </td> <td> Test results from capturing and processing acoustic data from WaterLink's USBL system </td> </tr> 
+</table>
+
+## Analytical resources
 
 * Code can be found [here](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/tree/main/code).
-* We are fortunate to be working with [Clyde McQueen](https://github.com/clydemcqueen), who’s assisting with a variety of software aspects of our project, including the development of custom software to enable “terrain following” (dubbed _surftrak_), where the ROV auto-adjusts its altitude over varying seafloor based upon readings from the Ping Sonar Altimeter. For more information, please see Clyde’s [_surftrak_ repository](https://github.com/clydemcqueen/ardusub_surftrak). 
-* Clyde has also made Python scripts available to help process and analyze ROV telemetry logs from ROVs running ArduSub -- those scripts can be accessed [here](https://github.com/clydemcqueen/ardusub_log_tools).
-* Clyde also made a [BlueOS Extension](https://discuss.bluerobotics.com/t/external-integrations-extensions/10912) that listens for NMEA messages from our GNSS Satellite compass and feeds that information to our WaterLinked UGPS G2 box. This has greatly aided our efforts to obtain precise GPS positioning information about the ROV. This BlueOS extension is open-source and can be downloaded [here](https://github.com/clydemcqueen/wl_ugps_external_extension).    
-* As an example of the two AI analyses programs we are using, see figure 4 below, taken from our 2022 year-end report to the Port of Seattle, which itself can be downloaded [here](https://drive.google.com/file/d/1HJUBRQQiuhMxuoTgmrHuluVSnRD-cZ3M/view).  
-* To view the 66 percent-cover categories of red, green, & brown algae, substrate types, sessile and mobile invertebrates, and fishes that we have created in CoralNet, view [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/blob/main/documents/CoralNet_Classifications.xlsx) *.xlsx* document (click "view raw" or "download").
-* To view our *Overarching_Workflow.xlsx* document, tracking the precise steps required throughout file (e.g., *.bin*, *.csv*, *.mp4*, *.jpg*) creation, processing, merging, saving, analysis, etc., see [this](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/blob/main/documents/Overarching_Workflow.xlsx) *.xlsx* document (click "view raw" or "download"). 
+
+* Megan Williams, Seattle Aquarium Research Technician, is leading the expansion of [this](https://experience.arcgis.com/experience/b11daaa83ff045f1a9d88b2b926e1f75) existing bull kelp habitat suitability model. More resources will be linked here shortly.
+
+* To view all code and resources necessary to simulate ROV-derived data (i.e., to simulate data from CoralNet and VIAME), see [Seattle_Aquarium_CCR_benthic_taxa_simulation](https://github.com/zhrandell/Seattle_Aquarium_CCR_benthic_taxa_simulation)
+
+* As an example of our manual annotations in VIAME for invertebrates and fish from the downward-facing ROV camera, see [here](https://viame.kitware.com/#/viewer/65f9a6c9481fe4ee851404f1).
+
+* As an example of our manual annotations in VIAME of bull kelp stipes from the forward-facing ROV camera, see [here](https://viame.kitware.com/#/viewer/6650f76027e66d3c73937562).
+
+* To view the 66 percent-cover categories of red, green, & brown algae, substrate types, sessile and mobile invertebrates, and fishes that we have created in CoralNet, view [this](https://github.com/zhrandell/Seattle_Aquarium_CCR_analytical_resources/blob/main/documents/CoralNet_Classifications.xlsx) *.xlsx* document (click "view raw" or "download").
+
+* Our AI analyses are actively under development. More information about our desired future functionality can be found at [Seattle_Aquarium_CCR_development](https://github.com/zhrandell/Seattle_Aquarium_CCR_development), specifically at the 1-page project descriptions [KelpNet](https://github.com/zhrandell/Seattle_Aquarium_CCR_development/blob/main/1-pagers/KelpNet.md) and [bull_kelp_tracking](https://github.com/zhrandell/Seattle_Aquarium_CCR_development/blob/main/1-pagers/bull_kelp_tracking.md)
 
 <p align="center">
   <img src="figures/AI_image.png" width="600", height="400"/>
