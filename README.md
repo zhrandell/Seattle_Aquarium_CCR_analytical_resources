@@ -8,12 +8,15 @@ Furthermore, this repository will provide a central location to hash out problem
 
 For more general information about this ROV project including summary documentation, ROV videos, and photos from its deployment, see our main GitHub repo [Seattle_Aquarium_CCR_Coastal_Climate_Resilience](https://github.com/zhrandell/Seattle_Aquarium_CCR_Coastal_Climate_Resilience)
 
+To see active areas of develop where we are seeking assistance with software and analytical development, see the 1-page projects descriptions found at [Seattle_Aquarium_CCR_development](https://github.com/zhrandell/Seattle_Aquarium_CCR_development) 
+
 ## GitHub resources
 
-We are fortunate to be working with [Clyde McQueen](https://github.com/clydemcqueen), who’s assisting with a variety of software aspects of our project, including the development of custom software to enable “terrain following” (dubbed _surftrak_), where the ROV auto-adjusts its altitude over varying seafloor based upon readings from the Ping Sonar Altimeter. The following table lists out multiple open-sources resources Clyde has developed.
+We are fortunate to be working with [Clyde McQueen](https://github.com/clydemcqueen), who’s assisting with a variety of software aspects of our project, including the development of custom software to enable “terrain following” (dubbed surftrak), where the ROV auto-adjusts its altitude over varying seafloor based upon readings from the Ping Sonar Altimeter. The following table lists out multiple open-sources resources Clyde has developed.
 
 <table>
 <tr> <td> <a href="https://github.com/clydemcqueen/ardusub_surftrak"> <b> ardusub_surftrak </b> </a> </td> <td> A range hold flight mode enabling the ROV to autonomously maintain a set altitude above the seafloor </td> </tr> 
+<tr> <td> <a href="https://github.com/clydemcqueen/surftrak_fixit"> <b> surftrak_fixit </b> </a> </td> <td> A BlueOS extension that can diagnose and fix common surftrak problems </td> </tr> 
 <tr> <td> <a href="https://github.com/clydemcqueen/wl_ugps_external_extension"> <b> wl_ugps_external_extension </b> </a> </td> <td> A blueOS extension that listens for NMEA messages from our GNSS Satelitte Compass and feeds those data to our USBL system </td> </tr> 
 <tr> <td> <a href="https://github.com/clydemcqueen/ardusub_log_tools"> <b> ardusub_log_tools </b> </a> </td> <td> A collection of log analysis tools for working with ArduSub vehicles </td> </tr> 
 <tr> <td> <a href="https://github.com/clydemcqueen/wl_ugps_acoustic_analysis"> <b> wl_ugps_acoustic_analysis </b> </a> </td> <td> Test results from capturing and processing acoustic data from WaterLink's USBL system </td> </tr> 
@@ -23,9 +26,9 @@ We are fortunate to be working with [Clyde McQueen](https://github.com/clydemcqu
 
 * Code can be found [here](https://github.com/zhrandell/Seattle_Aquarium_ROV_telemetry_imagery_analysis/tree/main/code).
 
-* Megan Williams, Seattle Aquarium Research Technician, is leading the expansion of [this](https://experience.arcgis.com/experience/b11daaa83ff045f1a9d88b2b926e1f75) existing bull kelp habitat suitability model. More resources will be linked here shortly.
+* Megan Williams, Seattle Aquarium Research Technician, is leading the expansion of [this](https://experience.arcgis.com/experience/b11daaa83ff045f1a9d88b2b926e1f75) existing bull kelp habitat suitability model. A draft web version of our expanded habitat suitability model can be found [here](https://experience.arcgis.com/experience/17d4311a53454108a1196b90bd236547/page/Map/).
 
-* To view all code and resources necessary to simulate ROV-derived data (i.e., to simulate data from CoralNet and VIAME), see [Seattle_Aquarium_CCR_benthic_taxa_simulation](https://github.com/zhrandell/Seattle_Aquarium_CCR_benthic_taxa_simulation)
+* To view all code and resources necessary to simulate ROV-derived data (i.e., to simulate data from CoralNet and VIAME), see [Seattle_Aquarium_CCR_benthic_taxa_simulation](https://github.com/zhrandell/Seattle_Aquarium_CCR_benthic_taxa_simulation).
 
 * As an example of our manual annotations in VIAME for invertebrates and fish from the downward-facing ROV camera, see [here](https://viame.kitware.com/#/viewer/65f9a6c9481fe4ee851404f1).
 
