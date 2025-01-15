@@ -1,5 +1,7 @@
 # File name is file_manager.py
-# Location as of 2025-09-01: Seattle Aquarium Dropbox\Coastal_Climate_Resilience\SORT\code\Python\in_use
+# Locations as of 2025-01-15: 
+# 	Seattle Aquarium Dropbox\Coastal_Climate_Resilience\SORT\code\Python\in_use\file_manager.py
+#	C:\Users\thomsonr\Seattle Aquarium Dropbox\Coastal_Climate_Resilience\GitHub\Seattle_Aquarium_CCR_analytical_resources\code\file_manager.py
 
 import os
 import shutil
@@ -32,9 +34,9 @@ def sort_images(folder):
 		if file.lower().endswith('.jpg') and os.path.isfile(os.path.join(edited_dir_path, file))]
 
 	# Creates 'testing' and 'training' folders
-	testing_path = os.path.join(dir_path, 'testing')
+	testing_path = os.path.join(folder, 'testing')
 	os.makedirs(testing_path, exist_ok = True)
-	training_path = os.path.join(dir_path, 'training')
+	training_path = os.path.join(folder, 'training')
 	os.makedirs(training_path, exist_ok = True)
 
 	# Copies every third image to the 'testing' folder and all others to the 'training' folder
@@ -110,7 +112,9 @@ def menu():
 			continue
 		# Calls function to sort images into generated 'testing' and 'training' folders
 		if command == 1:
-			sort_images(dir_path)
+			for root in os.listdir(dir_path):
+				pathway = os.path.join(dir_path, root)
+				sort_images(pathway)
 		# Calls function to delete a directory and its contents
 		elif command == 2:
 			print('Enter paths to directories that will be deleted')
