@@ -1,7 +1,7 @@
 # File name is file_manager.py
 # Locations as of 2025-01-15: 
 # 	Seattle Aquarium Dropbox\Coastal_Climate_Resilience\SORT\code\Python\in_use\file_manager.py
-#	C:\Users\thomsonr\Seattle Aquarium Dropbox\Coastal_Climate_Resilience\GitHub\Seattle_Aquarium_CCR_analytical_resources\code\file_manager.py
+#	Seattle Aquarium Dropbox\Coastal_Climate_Resilience\GitHub\Seattle_Aquarium_CCR_analytical_resources\code\file_manager.py
 
 import os
 import shutil
