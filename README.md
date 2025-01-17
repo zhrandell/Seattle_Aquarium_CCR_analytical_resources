@@ -1,4 +1,4 @@
-# Seattle_Aquarium_CCR_analytical_resources
+# analytical resources 
 
 ## Overview
 
